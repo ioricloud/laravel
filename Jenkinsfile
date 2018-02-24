@@ -18,5 +18,6 @@ node('php'){
     
     stage('Docker Ship') {
         sh 'docker push ioricloud/laravel:$BUILD_NUMBER'
+        sh 'docker rmi -f ioricloud/laravel:$BUILD_NUMBER'
     }
 }
