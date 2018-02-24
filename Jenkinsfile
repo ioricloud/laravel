@@ -13,7 +13,7 @@ node('php56'){
     }
     
     stage('Docker Build') {
-        sh 'docker build -t jeffersonsouza/laravel:$BUILD_NUMBER .'
+        sh 'docker build -t jeffersonsouza/laravel:$BRANCH_NAME-$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
